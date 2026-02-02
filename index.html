@@ -1,11 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Tomás Cabello Fernández</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio | Tomás Cabello</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="inicio">
+      <div class="hero-text code">
+        <span>P</span><span>O</span><span>R</span><span>T</span> <span>F</span
+        ><span>O</span><span>L</span><span>I</span><span>O</span>
+      </div>
+      <h2 style="margin-top: 20px">Tomás Cabello</h2>
+      <p>Desarrollador Web & Creativo</p>
+    </section>
+
+    <section id="sobre-mi">
+      <h2>¿Quién soy?</h2>
+      <div class="flip-container">
+        <div class="flip-inner">
+          <div class="flip-front">
+            <img
+              src="assets/perfil-tomas.webp"
+              alt="Foto Perfil"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 15px;
+              "
+            />
+          </div>
+          <div class="flip-back">
+            <h3>Tomás Cabello</h3>
+            <p>
+              Estudiante de Desarrollo Web apasionado por CSS y el diseño UI/UX.
+            </p>
+            <div class="social-icons">
+              <img src="assets/github.svg" alt="GitHub" width="30" />
+              <img src="assets/linkedin.svg" alt="LinkedIn" width="30" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="habilidades">
+      <h2>Mis Habilidades</h2>
+      <div class="skills-container">
+        <div class="glass-card" style="--r: -15" data-text="HTML5">
+          <img src="assets/html5.svg" width="60" alt="HTML" />
+        </div>
+        <div class="glass-card" style="--r: 5" data-text="CSS3">
+          <img src="assets/css3.svg" width="60" alt="CSS" />
+        </div>
+        <div class="glass-card" style="--r: 25" data-text="Diseño">
+          <img src="assets/figma.svg" width="60" alt="Diseño" />
+        </div>
+      </div>
+    </section>
+
+    <section id="proyectos">
+      <h2>Mis Proyectos</h2>
+      <div
+        style="
+          display: flex;
+          gap: 50px;
+          align-items: center;
+          flex-wrap: wrap;
+          justify-content: center;
+        "
+      >
+        <div class="tarjeta-neon">
+          <div class="tarjeta-content">
+            <h3>Tarjeta Neon</h3>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <input class="search-txt" type="text" placeholder="Buscar..." />
+          <a class="search-btn" href="#">
+            <img src="assets/lupa.svg" width="20" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto">
+      <h2>Contáctame</h2>
+      <div class="main contact-wrapper">
+        <input type="checkbox" id="chk" aria-hidden="true" />
+
+        <div class="signup">
+          <form>
+            <label for="chk" aria-hidden="true">Escríbeme</label>
+            <input type="text" name="txt" placeholder="Nombre" required="" />
+            <input type="email" name="email" placeholder="Email" required="" />
+            <button>Enviar</button>
+          </form>
+        </div>
+
+        <div class="login">
+          <form>
+            <label for="chk" aria-hidden="true">Redes</label>
+            <p style="text-align: center; padding: 20px">
+              Encuéntrame en GitHub como Tomascabfer4
+            </p>
+            <button
+              type="button"
+              onclick="window.location.href = 'https://github.com/Tomascabfer4'"
+            >
+              Ir a GitHub
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
