@@ -124,8 +124,8 @@ body {
    3. HERO & ANIMACIONES
    ========================================= */
 section {
-  min-height: 100vh;
-  padding: 80px 20px;
+  min-height: auto; /* Permitir que la altura se ajuste al contenido si es necesario */
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -149,7 +149,7 @@ header {
 
 h2.titulo-seccion {
   font-size: 2.5rem;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   background: linear-gradient(to right, var(--primary), var(--secondary));
   -webkit-background-clip: text;
   color: transparent;
@@ -473,13 +473,51 @@ h1 {
    5. PROYECTOS & CONTACTO
    ========================================= */
 .cuadricula-proyectos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
   width: 100%;
   max-width: 1200px;
 }
+
+/* Layout en Cruz para escritorio (4 cartas) */
+@media (min-width: 1024px) {
+  .cuadricula-proyectos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto; /* Solo 2 filas */
+    justify-items: center;
+    align-items: center;
+  }
+
+  .tarjeta-proyecto {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  .tarjeta-proyecto:nth-child(1) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .tarjeta-proyecto:nth-child(2) {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+  .tarjeta-proyecto:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
+  }
+  .tarjeta-proyecto:nth-child(4) {
+    grid-column: 2;
+    grid-row: 2;
+  }
+}
 .tarjeta-proyecto {
+  flex: 1 1 300px;
+  max-width: 380px;
   background: var(--card-bg);
   border-radius: 15px;
   overflow: hidden;
