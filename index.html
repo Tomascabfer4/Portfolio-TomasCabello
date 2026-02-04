@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio | Tomás Cabello</title>
+    <title>Portfolio | Tomás Cabello</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="floating-nav">
-      <div class="nav-logo">TC</div>
-      <ul class="nav-links">
+    <nav class="navegacion-flotante">
+      <div class="logo-nav">Tomascabfer4</div>
+      <ul class="enlaces-nav">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#experiencia">Experiencia</a></li>
         <li><a href="#formacion">Formación</a></li>
@@ -23,57 +23,64 @@
         <li><a href="#proyectos">Proyectos</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
-      <div class="nav-lang">
-        <span class="active">ES</span>
+      <div class="idioma-nav">
+        <span class="activo">ES</span>
       </div>
     </nav>
 
     <header id="inicio">
-      <div class="hero-content">
+      <div class="contenido-principal">
         <h1>Tomás Cabello</h1>
-        <div class="typing-container">
-          <span class="typing-text"
+        <div class="contenedor-escritura">
+          <span class="texto-escritura"
             >Desarrollador Fullstack & Integrador de IA</span
           >
         </div>
-        <p class="subtitle">React | Next.js | Java | .NET | Cloud</p>
+        <p class="subtitulo">
+          Angular | Ionic | React | Next.js | Java | .NET | Cloud
+        </p>
 
-        <div class="hero-badges">
-          <span class="badge badge-react">React</span>
-          <span class="badge badge-next">Next.js</span>
-          <span class="badge badge-ai">Artificial Intelligence</span>
+        <div class="pegatinas-principales">
+          <span class="pegatina pegatina-angular">Angular</span>
+          <span class="pegatina pegatina-ionic">Ionic</span>
+          <span class="pegatina pegatina-react">React</span>
+          <span class="pegatina pegatina-next">Next.js</span>
+          <span class="pegatina pegatina-java">Java</span>
+          <span class="pegatina pegatina-dotnet">.NET</span>
+          <span class="pegatina pegatina-cloud">Cloud</span>
+          <span class="pegatina pegatina-ia">Artificial Intelligence</span>
         </div>
       </div>
-      <div class="scroll-indicator">↓</div>
+      <div class="indicador-desplazamiento">↓</div>
     </header>
 
-    <section id="sobre-mi" class="scroll-reveal">
-      <h2 class="section-title">Sobre Mí</h2>
-      <div class="about-grid">
-        <div class="flip-container">
-          <div class="flip-inner">
-            <div class="flip-front">
+    <section id="sobre-mi" class="revelar-desplazamiento">
+      <h2 class="titulo-seccion">Sobre Mí</h2>
+      <div class="cuadricula-sobre-mi">
+        <div class="contenedor-voltear">
+          <div class="interior-voltear">
+            <div class="frente-voltear">
               <picture>
                 <source
-                  srcset="assets/tomas-large.avif"
+                  srcset="assets/Tomas.png"
                   media="(min-width: 800px)"
-                  type="image/avif"
+                  type="image/png"
                 />
                 <source
-                  srcset="assets/tomas-medium.webp"
+                  srcset="assets/Tomas.png"
                   media="(min-width: 450px)"
-                  type="image/webp"
+                  type="image/png"
                 />
                 <img
-                  src="assets/tomas-fallback.png"
+                  src="assets/Tomas.png"
                   alt="Tomás Cabello"
-                  class="profile-img"
+                  class="imagen-perfil"
                 />
               </picture>
             </div>
-            <div class="flip-back">
+            <div class="dorso-voltear">
               <h3>Perfil Técnico</h3>
-              <p class="bio-text">
+              <p class="texto-bio">
                 Más allá del código, soy un apasionado de la tecnología.
               </p>
               <hr
@@ -83,8 +90,8 @@
                   margin: 10px 0;
                 "
               />
-              <p class="hobbies">🎧 DJ | 🔧 Modding | 🎮 Gaming</p>
-              <div class="social-icons-mini">
+              <p class="pasatiempos">🎧 DJ | 🔧 Modding | 🎮 Gaming</p>
+              <div class="iconos-sociales-mini">
                 <a href="https://github.com/Tomascabfer4" target="_blank"
                   >GitHub</a
                 >
@@ -93,7 +100,7 @@
           </div>
         </div>
 
-        <div class="about-text">
+        <div class="texto-sobre-mi">
           <h3>Ingeniería y Creatividad</h3>
           <p>
             Especializado en el ecosistema JavaScript moderno (React, Next.js) y
@@ -110,14 +117,14 @@
       </div>
     </section>
 
-    <section id="experiencia" class="scroll-reveal">
-      <h2 class="section-title">Experiencia</h2>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
+    <section id="experiencia" class="revelar-desplazamiento">
+      <h2 class="titulo-seccion">Experiencia</h2>
+      <div class="linea-tiempo">
+        <div class="item-linea-tiempo">
+          <div class="punto-linea-tiempo"></div>
+          <div class="contenido-linea-tiempo">
             <h3>Freelance Fullstack Developer</h3>
-            <span class="timeline-date">Actualidad</span>
+            <span class="fecha-linea-tiempo">Actualidad</span>
             <p>
               Desarrollo de aplicaciones web a medida para clientes (ej. Gestión
               de Licitaciones). Integración de APIs, diseño UI/UX y despliegue
@@ -125,11 +132,11 @@
             </p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
+        <div class="item-linea-tiempo">
+          <div class="punto-linea-tiempo"></div>
+          <div class="contenido-linea-tiempo">
             <h3>Técnico de Hardware & Modding</h3>
-            <span class="timeline-date">2020 - Actualidad</span>
+            <span class="fecha-linea-tiempo">2020 - Actualidad</span>
             <p>
               Mantenimiento, reparación y optimización de ordenadores y
               consolas. Especialista en liberación de sistemas y mejora de
@@ -137,11 +144,11 @@
             </p>
           </div>
         </div>
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
+        <div class="item-linea-tiempo">
+          <div class="punto-linea-tiempo"></div>
+          <div class="contenido-linea-tiempo">
             <h3>DJ & Producción Musical</h3>
-            <span class="timeline-date">Hobbie Profesional</span>
+            <span class="fecha-linea-tiempo">Hobbie Profesional</span>
             <p>
               Gestión de eventos y mezcla musical en directo. Desarrollo de
               marca personal y gestión de redes.
@@ -151,63 +158,72 @@
       </div>
     </section>
 
-    <section id="formacion" class="scroll-reveal-right">
-      <h2 class="section-title">Formación</h2>
-      <div class="education-grid">
-        <div class="edu-card">
+    <section id="formacion" class="revelar-desplazamiento-derecha">
+      <h2 class="titulo-seccion">Formación</h2>
+      <div class="cuadricula-educacion">
+        <div class="tarjeta-educacion">
           <h3>DAW</h3>
           <p>Desarrollo de Aplicaciones Web</p>
-          <span class="edu-status">En Curso</span>
+          <span class="estado-educacion">En Curso</span>
         </div>
-        <div class="edu-card">
+        <div class="tarjeta-educacion">
           <h3>DAM</h3>
           <p>Desarrollo de Aplicaciones Multiplataforma</p>
-          <span class="edu-status finished">Titulado</span>
+          <span class="estado-educacion finalizado">Titulado</span>
         </div>
-        <div class="edu-card">
+        <div class="tarjeta-educacion">
           <h3>SMR</h3>
           <p>Sistemas Microinformáticos y Redes</p>
-          <span class="edu-status finished">Titulado</span>
+          <span class="estado-educacion finalizado">Titulado</span>
         </div>
       </div>
     </section>
 
-    <section id="habilidades" class="scroll-reveal-right">
-      <h2 class="section-title">Tecnologías</h2>
-      <div class="container-glass">
-        <div class="glass" style="--r: -15" data-text="Frontend">
-          <img src="assets/icon-react.svg" alt="React" class="skill-icon" />
-          <span class="glass-label">React & Next.js</span>
+    <section id="habilidades" class="revelar-desplazamiento-derecha">
+      <h2 class="titulo-seccion">Tecnologías</h2>
+      <div class="contenedor-cristal">
+        <div class="cristal" style="--r: -15" data-text="Frontend">
+          <img
+            src="assets/icon-react.svg"
+            alt="React"
+            class="icono-habilidad"
+          />
+          <span class="etiqueta-cristal">React & Next.js</span>
         </div>
-        <div class="glass" style="--r: 5" data-text="Backend">
-          <img src="assets/icon-java.svg" alt="Java" class="skill-icon" />
-          <span class="glass-label">Java & .NET</span>
+        <div class="cristal" style="--r: 5" data-text="Backend">
+          <img src="assets/icon-java.svg" alt="Java" class="icono-habilidad" />
+          <span class="etiqueta-cristal">Java & .NET</span>
         </div>
-        <div class="glass" style="--r: 25" data-text="Cloud">
-          <img src="assets/icon-cloud.svg" alt="Cloud" class="skill-icon" />
-          <span class="glass-label">AWS & Firebase</span>
+        <div class="cristal" style="--r: 25" data-text="Cloud">
+          <img
+            src="assets/icon-cloud.svg"
+            alt="Cloud"
+            class="icono-habilidad"
+          />
+          <span class="etiqueta-cristal">AWS & Firebase</span>
         </div>
-        <div class="glass" style="--r: -5" data-text="IA">
-          <img src="assets/icon-ai.svg" alt="IA" class="skill-icon" />
-          <span class="glass-label">LLMs & APIs</span>
+        <div class="cristal" style="--r: -5" data-text="IA">
+          <img src="assets/icon-ai.svg" alt="IA" class="icono-habilidad" />
+          <span class="etiqueta-cristal">LLMs & APIs</span>
         </div>
       </div>
     </section>
 
-    <section id="proyectos" class="scroll-zoom">
-      <h2 class="section-title">Proyectos Destacados</h2>
-      <div class="projects-grid">
-        <div class="project-card neon-card">
-          <div class="card-image-container">
+    <section id="proyectos" class="zoom-desplazamiento">
+      <h2 class="titulo-seccion">Proyectos Destacados</h2>
+      <div class="cuadricula-proyectos">
+        <div class="tarjeta-proyecto tarjeta-neon">
+          <div class="contenedor-imagen-tarjeta">
             <img
-              src="assets/proj-furbo.webp"
+              src="assets/FurboVacano.png"
               alt="Furbo Vacano"
-              class="project-img"
+              class="imagen-proyecto"
             />
           </div>
-          <div class="card-content">
+          <div class="contenido-tarjeta">
             <h3>⚽ Furbo Vacano TV</h3>
-            <span class="tag">Android TV</span> <span class="tag">React</span>
+            <span class="etiqueta">Android TV</span>
+            <span class="etiqueta">React</span>
             <p>
               Centro multimedia para Android TV optimizado para mando. Sistema
               <strong>FurboSync™</strong> para actualizaciones OTA.
@@ -215,24 +231,24 @@
             <a
               href="https://github.com/Tomascabfer4/FurboVacano"
               target="_blank"
-              class="btn-project"
+              class="boton-proyecto"
               >Ver Repositorio</a
             >
           </div>
         </div>
 
-        <div class="project-card glass-project">
-          <div class="card-image-container">
+        <div class="tarjeta-proyecto tarjeta-cristal">
+          <div class="contenedor-imagen-tarjeta">
             <img
               src="assets/proj-admin.webp"
               alt="Furbo Admin"
-              class="project-img"
+              class="imagen-proyecto"
             />
           </div>
-          <div class="card-content">
+          <div class="contenido-tarjeta">
             <h3>👑 Furbo Admin</h3>
-            <span class="tag">TypeScript</span>
-            <span class="tag">Serverless</span>
+            <span class="etiqueta">TypeScript</span>
+            <span class="etiqueta">Serverless</span>
             <p>
               CMS Serverless conectado a la API de GitHub. Permite gestionar
               canales y listas JSON en tiempo real.
@@ -240,24 +256,24 @@
             <a
               href="https://github.com/Tomascabfer4/furbo-admin"
               target="_blank"
-              class="btn-project"
+              class="boton-proyecto"
               >Ver Repositorio</a
             >
           </div>
         </div>
 
-        <div class="project-card clean-card">
-          <div class="card-image-container">
+        <div class="tarjeta-proyecto tarjeta-limpia">
+          <div class="contenedor-imagen-tarjeta">
             <img
               src="assets/proj-lucas.webp"
               alt="Gestión Licitaciones"
-              class="project-img"
+              class="imagen-proyecto"
             />
           </div>
-          <div class="card-content">
+          <div class="contenido-tarjeta">
             <h3>🏢 Gestión Licitaciones</h3>
-            <span class="tag">Empresarial</span>
-            <span class="tag">Analytics</span>
+            <span class="etiqueta">Empresarial</span>
+            <span class="etiqueta">Analytics</span>
             <p>
               Solución integral para gestión de contratos y licitaciones.
               Incluye Business Intelligence.
@@ -265,23 +281,24 @@
             <a
               href="https://github.com/Tomascabfer4/App_Lucas_Rojas_EMPRESA"
               target="_blank"
-              class="btn-project"
+              class="boton-proyecto"
               >Ver Repositorio</a
             >
           </div>
         </div>
 
-        <div class="project-card playful-card">
-          <div class="card-image-container">
+        <div class="tarjeta-proyecto tarjeta-ludica">
+          <div class="contenedor-imagen-tarjeta">
             <img
               src="assets/proj-chapas.webp"
               alt="Fútbol Chapas .NET"
-              class="project-img"
+              class="imagen-proyecto"
             />
           </div>
-          <div class="card-content">
+          <div class="contenido-tarjeta">
             <h3>⚽ Fútbol Chapas 5vs5</h3>
-            <span class="tag">C# .NET</span> <span class="tag">WinForms</span>
+            <span class="etiqueta">C# .NET</span>
+            <span class="etiqueta">WinForms</span>
             <p>
               Simulador táctico de fútbol con chapas. Motor de físicas propio
               para rebotes y colisiones.
@@ -289,7 +306,7 @@
             <a
               href="https://github.com/Tomascabfer4/JuegoChapas"
               target="_blank"
-              class="btn-project"
+              class="boton-proyecto"
               >Ver Repositorio</a
             >
           </div>
@@ -297,17 +314,13 @@
       </div>
     </section>
 
-    <section id="contacto" class="scroll-reveal">
-      <h2 class="section-title">Conecta conmigo</h2>
-      <div class="main-contact">
+    <section id="contacto" class="revelar-desplazamiento">
+      <h2 class="titulo-seccion">Conecta conmigo</h2>
+      <div class="contacto-principal">
         <input type="checkbox" id="chk" aria-hidden="true" />
 
-        <div class="signup">
-          <form
-            action="mailto:tomascabfer4@gmail.com"
-            method="post"
-            enctype="text/plain"
-          >
+        <div class="registro">
+          <form action="mailto:tomascabfer4@gmail.com" method="post">
             <label for="chk" aria-hidden="true">Enviar Correo</label>
             <input type="text" name="nombre" placeholder="Nombre" required="" />
             <input type="email" name="email" placeholder="Email" required="" />
@@ -329,26 +342,26 @@
           </form>
         </div>
 
-        <div class="login">
+        <div class="inicio-sesion">
           <form>
             <label for="chk" aria-hidden="true">Redes Sociales</label>
-            <div class="social-links-container">
+            <div class="contenedor-enlaces-sociales">
               <a
                 href="https://www.linkedin.com/in/tom%C3%A1s-cabello-fern%C3%A1ndez-25b838201/"
                 target="_blank"
-                class="social-btn linkedin"
+                class="boton-social linkedin"
                 >LinkedIn</a
               >
               <a
                 href="https://github.com/Tomascabfer4"
                 target="_blank"
-                class="social-btn github"
+                class="boton-social github"
                 >GitHub</a
               >
               <a
                 href="https://www.instagram.com/tomas_cf4"
                 target="_blank"
-                class="social-btn instagram"
+                class="boton-social instagram"
                 >Instagram</a
               >
             </div>
@@ -358,7 +371,7 @@
     </section>
 
     <footer>
-      <div class="box-footer">
+      <div class="caja-pie-pagina">
         <span>2</span><span>0</span><span>2</span><span>5</span>
       </div>
       <p>Diseñado por Tomás Cabello | Desarrollador Fullstack</p>
