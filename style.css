@@ -1,28 +1,39 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700&family=Poppins:wght@300;500;800&display=swap");
+
+/* =========================================
+   EXPLICACIÓN RESPONSIVE:
+   Esta web se adapta a cualquier dispositivo gracias a:
+   1. Unidades relativas: Usamos porcentajes (%) y 'auto' en lugar de medidas fijas.
+   2. Flexbox y Grid: Permiten que las cajas se reorganicen según el espacio disponible.
+   3. Media Queries: Cambiamos ciertos estilos para dispositivos móviles.
+   ========================================= */
+
 /* =========================================
    1. VARIABLES Y TEMA
    ========================================= */
 :root {
-  --bg-color: #f4f7f6;
-  --text-color: #333;
-  --primary: #29b3db;
-  --secondary: #9a5ae8;
-  --accent: #ff3670;
-  --card-bg: #fff;
-  --font-main: "Poppins", sans-serif;
-  --font-alt: "Nunito", sans-serif;
-  --nav-bg: rgba(255, 255, 255, 0.8);
-  --nav-border: rgba(0, 0, 0, 0.1);
+  --color-fondo: #f4f7f6;
+  --color-texto: #333;
+  --primario: #29b3db;
+  --secundario: #9a5ae8;
+  --acento: #ff3670;
+  --fondo-tarjeta: #fff;
+  --fuente-principal: "Poppins", sans-serif;
+  --fuente-alternativa: "Nunito", sans-serif;
+  --fondo-nav: rgba(255, 255, 255, 0.8);
+  --borde-nav: rgba(0, 0, 0, 0.1);
 }
 
+/* Para modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-color: #0d1117;
-    --text-color: #c9d1d9;
-    --card-bg: #161b22;
-    --primary: #58a6ff;
-    --secondary: #bc8cff;
-    --nav-bg: rgba(22, 27, 34, 0.7);
-    --nav-border: rgba(255, 255, 255, 0.1);
+    --color-fondo: #0d1117;
+    --color-texto: #c9d1d9;
+    --fondo-tarjeta: #161b22;
+    --primario: #58a6ff;
+    --secundario: #bc8cff;
+    --fondo-nav: rgba(22, 27, 34, 0.7);
+    --borde-nav: rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -34,9 +45,9 @@
 }
 
 body {
-  font-family: var(--font-main);
-  background: var(--bg-color);
-  color: var(--text-color);
+  font-family: var(--fuente-principal);
+  background: var(--color-fondo);
+  color: var(--color-texto);
   overflow-x: hidden;
   transition: background 0.3s ease;
   padding-top: 80px; /* Espacio para el nav fijo */
@@ -48,20 +59,22 @@ body {
 .navegacion-flotante {
   position: fixed;
   top: 20px;
+  /* Para que el nav este centrado */
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
+  width: 100%;
   max-width: 900px;
   height: 60px;
-  background: var(--nav-bg);
+  background: var(--fondo-nav);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border: 1px solid var(--nav-border);
+  border: 1px solid var(--borde-nav);
   border-radius: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 25px;
+  /* De esta forma el nav se posiciona encima de todo */
   z-index: 1000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
@@ -69,7 +82,7 @@ body {
 .logo-nav {
   font-weight: 800;
   font-size: 19px;
-  color: var(--primary);
+  color: var(--primario);
   letter-spacing: 1px;
 }
 
@@ -81,7 +94,7 @@ body {
 
 .enlaces-nav a {
   text-decoration: none;
-  color: var(--text-color);
+  color: var(--color-texto);
   font-size: 14px;
   font-weight: 500;
   transition: 0.3s;
@@ -89,18 +102,18 @@ body {
 }
 
 .enlaces-nav a:hover {
-  color: var(--primary);
+  color: var(--primario);
   opacity: 1;
 }
 
 .idioma-nav {
   font-size: 14px;
-  color: var(--text-color);
+  color: var(--color-texto);
   opacity: 0.7;
 }
 .idioma-nav .activo {
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--color-texto);
   opacity: 1;
 }
 
@@ -121,7 +134,7 @@ body {
 }
 
 /* =========================================
-   3. HERO & ANIMACIONES
+   3. PORTADA Y ANIMACIONES
    ========================================= */
 section {
   min-height: auto; /* Permitir que la altura se ajuste al contenido si es necesario */
@@ -150,10 +163,10 @@ header {
 h2.titulo-seccion {
   font-size: 40px;
   margin-bottom: 20px;
-  background: linear-gradient(to right, var(--primary), var(--secondary));
+  background: linear-gradient(to right, var(--primario), var(--secundario));
   -webkit-background-clip: text;
   color: transparent;
-  font-family: var(--font-alt);
+  font-family: var(--fuente-alternativa);
   font-weight: 800;
 }
 
@@ -168,6 +181,7 @@ h2.titulo-seccion {
     transform: translateY(0);
   }
 }
+/* Para que se vaya revelando las secciones al desplazarse */
 .revelar-desplazamiento {
   animation: fadeInUp linear both;
   animation-timeline: view();
@@ -194,20 +208,25 @@ h2.titulo-seccion {
   animation-range: entry 10% cover 30%;
 }
 
-/* Hero Texto */
+/* Texto de la Portada */
 h1 {
   font-size: 56px;
   margin-bottom: 10px;
   font-weight: 800;
 }
+/* Animacion de texto escribiendo */
 .contenedor-escritura {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 3px solid var(--accent);
+  /* El borde derecho simula el cursor parpadeando */
+  border-right: 3px solid var(--acento);
   font-size: 19px;
-  color: var(--accent);
+  color: var(--acento);
   width: 0;
+  /* ANATOMÍA DEL ESCRIBIR:
+     'steps(40)' hace que no sea fluido, sino a saltos (golpes de tecla).
+     Es lo que da el efecto de máquina de escribir digital. */
   animation:
     typing 3.5s steps(40, end) forwards,
     blink 0.75s step-end infinite;
@@ -226,7 +245,7 @@ h1 {
     border-color: transparent;
   }
   50% {
-    border-color: var(--accent);
+    border-color: var(--acento);
   }
 }
 
@@ -254,6 +273,7 @@ h1 {
 }
 .pegatina-java {
   background: #f7df1e;
+  color: black;
 }
 .pegatina-dotnet {
   background: #007acc;
@@ -316,9 +336,13 @@ h1 {
 .interior-voltear {
   width: 100%;
   height: 100%;
+  /* ANATOMÍA DE UNA ANIMACIÓN (LÍNEA DE TIEMPO):
+     Aquí 'transition' define la duración. 0.8s es el tiempo que tarda la carta en girar.
+     Es como el metrónomo de nuestra animación. */
   transition: transform 0.8s;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; /* Mantiene el efecto 3D durante el giro */
   position: relative;
+  /* Fuente: Lógica adaptada del código "Flip Card" proporcionado */
 }
 .contenedor-voltear:hover .interior-voltear {
   transform: rotateY(180deg);
@@ -332,7 +356,7 @@ h1 {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  background: var(--card-bg);
+  background: var(--fondo-tarjeta);
 }
 .frente-voltear img {
   width: 100%;
@@ -347,7 +371,7 @@ h1 {
   justify-content: center;
   padding: 20px;
   text-align: center;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--primario);
 }
 .dorso-voltear hr {
   width: 50%;
@@ -369,10 +393,12 @@ h1 {
   content: "";
   position: absolute;
   width: 2px;
-  background: var(--primary);
+  background: var(--primario);
   top: 0;
   bottom: 0;
-  left: 20px; /* Linea a la izquierda */
+  /* Esta es la columna vertebral de la línea de tiempo.
+     Se dibuja con este pseudo-elemento (::after) y se posiciona a la izquierda. */
+  left: 20px;
 }
 .item-linea-tiempo {
   padding: 10px 40px;
@@ -382,24 +408,24 @@ h1 {
 .punto-linea-tiempo {
   width: 16px;
   height: 16px;
-  background: var(--secondary);
+  background: var(--secundario);
   position: absolute;
   left: 13px;
   top: 15px;
   border-radius: 50%;
   z-index: 10;
-  border: 3px solid var(--bg-color);
+  border: 3px solid var(--color-fondo);
 }
 .contenido-linea-tiempo {
-  background: var(--card-bg);
+  background: var(--fondo-tarjeta);
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  border-left: 4px solid var(--secondary);
+  border-left: 4px solid var(--secundario);
 }
 .fecha-linea-tiempo {
   font-size: 13px;
-  color: var(--text-color);
+  color: var(--color-texto);
   opacity: 0.7;
   font-weight: bold;
   display: block;
@@ -414,13 +440,13 @@ h1 {
   justify-content: center;
 }
 .tarjeta-educacion {
-  background: var(--card-bg);
+  background: var(--fondo-tarjeta);
   padding: 30px;
   border-radius: 15px;
   width: 250px;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  border-top: 5px solid var(--primary);
+  border-top: 5px solid var(--primario);
   transition: 0.3s;
 }
 .tarjeta-educacion:hover {
@@ -433,7 +459,7 @@ h1 {
   border-radius: 20px;
   font-size: 13px;
   background: rgba(41, 179, 219, 0.1);
-  color: var(--primary);
+  color: var(--primario);
   font-weight: bold;
 }
 .estado-educacion.finalizado {
@@ -456,11 +482,14 @@ h1 {
   backdrop-filter: blur(10px);
   border-radius: 15px;
   display: flex;
+  /* Fuente: Efecto 'Glassmorphism' y rotación adaptado del código proporcionado */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: 0.5s;
-  transform: rotate(calc(var(--r) * 1deg));
+  transition: 0.5s; /* La carta tarda medio segundo en volver a su sitio al quitar el ratón */
+  transform: rotate(
+    calc(var(--r) * 1deg)
+  ); /* Rotación inicial basada en la variable --r */
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
 .cristal:hover {
@@ -474,6 +503,7 @@ h1 {
   margin-bottom: 15px;
 }
 
+/* Para que las tarjetas esten dobladas cada una de una manera distinta */
 .cristal:nth-child(1) {
   --r: -15;
 }
@@ -539,7 +569,7 @@ h1 {
 .tarjeta-proyecto {
   flex: 1 1 300px;
   max-width: 380px;
-  background: var(--card-bg);
+  background: var(--fondo-tarjeta);
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
@@ -574,7 +604,7 @@ h1 {
 }
 .contenido-tarjeta h3 {
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--color-texto);
 }
 .contenido-tarjeta p {
   font-size: 14px;
@@ -588,9 +618,9 @@ h1 {
   border-radius: 5px;
   font-size: 12px;
   background: rgba(154, 90, 232, 0.1);
-  color: var(--secondary);
+  color: var(--secundario);
   margin-right: 5px;
-  border: 1px solid var(--secondary);
+  border: 1px solid var(--secundario);
 }
 .boton-proyecto {
   text-decoration: none;
@@ -598,8 +628,8 @@ h1 {
   text-align: center;
   border-radius: 5px;
   font-weight: bold;
-  background: var(--text-color);
-  color: var(--bg-color);
+  background: var(--color-texto);
+  color: var(--color-fondo);
   transition: 0.3s;
 }
 .boton-proyecto:hover {
@@ -615,7 +645,8 @@ h1 {
   overflow: hidden;
   box-shadow: 5px 20px 50px rgba(0, 0, 0, 0.5);
   position: relative;
-  border: 1px solid var(--primary);
+  border: 1px solid var(--primario);
+  /* Fuente: Lógica de formulario deslizante (Login/Signup) extraída del código original */
 }
 #chk {
   display: none;
@@ -627,13 +658,14 @@ h1 {
 }
 .registro label,
 .inicio-sesion label {
-  color: var(--primary);
+  color: var(--primario);
   font-size: 2em;
   justify-content: center;
   display: flex;
   margin: 40px;
   font-weight: bold;
   cursor: pointer;
+  /* El transition suaviza el cambio de tamaño y color (0.5s) */
   transition: 0.5s ease-in-out;
 }
 .registro input,
@@ -657,7 +689,7 @@ h1 {
   height: 40px;
   margin: 20px auto;
   display: block;
-  background: var(--primary);
+  background: var(--primario);
   color: #fff;
   border: none;
   font-weight: bold;
@@ -668,7 +700,9 @@ h1 {
   height: 460px;
   background: #eee;
   border-radius: 60% / 10%;
-  transform: translateY(-180px);
+  border-radius: 60% / 10%;
+  transform: translateY(-180px); /* Posición inicial */
+  /* Aquí definimos que el movimiento (transform) tarde 0.8 segundos en completarse */
   transition: 0.8s ease-in-out;
 }
 .inicio-sesion label {
@@ -725,10 +759,10 @@ footer {
   font-weight: bold;
   display: inline-block;
   transition: 0.5s;
-  color: var(--secondary);
+  color: var(--secundario);
 }
 .caja-pie-pagina:hover span {
   transform: translateY(-20px);
-  color: var(--primary);
-  text-shadow: 0 0 20px var(--primary);
+  color: var(--primario);
+  text-shadow: 0 0 20px var(--primario);
 }
