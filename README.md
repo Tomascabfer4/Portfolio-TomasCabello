@@ -4,7 +4,7 @@
 Demostración de competencias en HTML5, CSS3 avanzado, animaciones y diseño responsivo sin uso de JavaScript.
 
 ## 🔗 Enlace al Despliegue
-> **[https://portfolio-tomascabello.pages.dev/]**
+> **https://portfolio-tomascabello.pages.dev/**
 
 ---
 
