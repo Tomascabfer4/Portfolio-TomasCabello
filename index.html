@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio | Tomás Cabello</title>
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -67,8 +68,8 @@
                   type="image/png"
                 />
                 <source
-                  srcset="assets/Tomas.png"
-                  media="(min-width: 450px)"
+                  srcset="assets/Tomas_Movil.png"
+                  media="(max-width: 799px)"
                   type="image/png"
                 />
                 <img
@@ -83,13 +84,7 @@
               <p class="texto-bio">
                 Más allá del código, soy un apasionado de la tecnología.
               </p>
-              <hr
-                style="
-                  width: 50%;
-                  border-color: rgba(255, 255, 255, 0.2);
-                  margin: 10px 0;
-                "
-              />
+              <hr />
               <p class="pasatiempos">🎧 DJ | 🔧 Modding | 🎮 Gaming</p>
               <div class="iconos-sociales-mini">
                 <a href="https://github.com/Tomascabfer4" target="_blank"
@@ -182,33 +177,33 @@
     <section id="habilidades" class="revelar-desplazamiento-derecha">
       <h2 class="titulo-seccion">Tecnologías</h2>
       <div class="contenedor-cristal">
-        <div class="cristal" style="--r: -15" data-text="Frontend">
+        <div class="cristal">
           <img
-            src="assets/IconoReact.png"
+            src="assets/IconoReact.svg"
             alt="React"
             class="icono-habilidad"
           />
           <span class="etiqueta-cristal">React & Next.js</span>
         </div>
-        <div class="cristal" style="--r: 5" data-text="Backend">
-          <img src="assets/IconoJava.png" alt="Java" class="icono-habilidad" />
+        <div class="cristal">
+          <img src="assets/IconoJava.svg" alt="Java" class="icono-habilidad" />
           <span class="etiqueta-cristal">Java & .NET</span>
         </div>
-        <div class="cristal" style="--r: 25" data-text="Cloud">
+        <div class="cristal">
           <img
-            src="assets/IconoCloud.png"
+            src="assets/IconoCloud.svg"
             alt="Cloud"
             class="icono-habilidad"
           />
           <span class="etiqueta-cristal">AWS & Firebase</span>
         </div>
-        <div class="cristal" style="--r: -5" data-text="IA">
-          <img src="assets/IconoApi.png" alt="IA" class="icono-habilidad" />
+        <div class="cristal">
+          <img src="assets/IconoApi.svg" alt="IA" class="icono-habilidad" />
           <span class="etiqueta-cristal">LLMs & APIs</span>
         </div>
-        <div class="cristal" style="--r: 15" data-text="Mobile">
+        <div class="cristal">
           <img
-            src="assets/IconoIonic.png"
+            src="assets/IconoIonic.svg"
             alt="Ionic"
             class="icono-habilidad"
           />
@@ -248,7 +243,7 @@
         <div class="tarjeta-proyecto tarjeta-cristal">
           <div class="contenedor-imagen-tarjeta">
             <img
-              src="assets/FurboAdmin.png"
+              src="assets/FurboAdmin.avif"
               alt="Furbo Admin"
               class="imagen-proyecto"
             />
@@ -273,7 +268,7 @@
         <div class="tarjeta-proyecto tarjeta-limpia">
           <div class="contenedor-imagen-tarjeta">
             <img
-              src="assets/LucasRojas.png"
+              src="assets/LucasRojas.webp"
               alt="Gestión Licitaciones"
               class="imagen-proyecto"
             />
@@ -332,20 +327,7 @@
             <label for="chk" aria-hidden="true">Enviar Correo</label>
             <input type="text" name="nombre" placeholder="Nombre" required="" />
             <input type="email" name="email" placeholder="Email" required="" />
-            <textarea
-              name="mensaje"
-              placeholder="Tu mensaje..."
-              style="
-                width: 60%;
-                height: 80px;
-                margin: 10px auto;
-                background: #e0dede;
-                border: none;
-                border-radius: 5px;
-                padding: 10px;
-                display: block;
-              "
-            ></textarea>
+            <textarea name="mensaje" placeholder="Tu mensaje..."></textarea>
             <button>Enviar</button>
           </form>
         </div>
